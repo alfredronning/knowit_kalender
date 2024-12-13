@@ -28,10 +28,6 @@ for i in inp:
     x, y = i.split()
     GREP.add((int(x), int(y)))
 
-def kan_gripe(current, bruker_hoeyre, tak):
-    dist = (tak[0]-current[0], tak[1]-current[1])
-    return dist in (HOEYRE if bruker_hoeyre else VENSTE)
-
 def kalk_dist(current, tak):
     return ((current[0]-tak[0])**2+(current[1]-tak[1])**2)**0.5
 
@@ -50,10 +46,11 @@ def kortestevei():
         if current == END:
             best = dist
             continue
-        for tak in GREP:
-            if tak[0] <= current[0]:
+        for dx, dy in HOEYRE if bruker_hoeyre else VENSTE:
+            if dx <= 0:
                 continue
-            if not kan_gripe(current, bruker_hoeyre, tak):
+            tak = (current[0]+dx, current[1]+dy)
+            if tak not in GREP:
                 continue
             next_dist = kalk_dist(current, tak) + dist
             if (tak, not bruker_hoeyre) in dists and dists[(tak, not bruker_hoeyre)] <= next_dist:
