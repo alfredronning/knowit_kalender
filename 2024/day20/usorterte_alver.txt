@@ -35,7 +35,6 @@ Galadriel_34 137
 Elrond_35 128
 Thranduil_36 49
 Thranduil_37 149
-Erestor_38 201
 Luthien_39 74
 Finrod_40 43
 Luthien_41 73
@@ -125,7 +124,6 @@ Tauriel_124 205
 Feanor_125 62
 Finrod_126 166
 Haldir_127 186
-Elrond_128 201
 Celebrimbor_129 55
 Arwen_130 118
 Celebrimbor_131 50
@@ -231,7 +229,6 @@ Legolas_230 197
 Erestor_231 195
 Erestor_232 201
 Celebrimbor_233 41
-Erestor_234 196
 Legolas_235 157
 Celebrimbor_236 88
 Glorfindel_237 175
